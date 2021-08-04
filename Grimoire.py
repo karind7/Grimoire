@@ -55,11 +55,6 @@ def mf_table(year):
     return mf_year
 
 
-def herbs_table():
-    herbs = pd.read_excel('witchcraft.xlsx')
-    return herbs
-
-
 st.markdown(Title_html, unsafe_allow_html=True)
 
 with st.beta_container():
@@ -67,9 +62,4 @@ with st.beta_container():
     year = st.text_input(label='year:', value=year)
     st.dataframe(mf_table(year), width=800, height=900)
     st.image("https://c.tadst.com/gfx/1200x630/moon-phases-explained.png?1")
-
-
-# with st.beta_container():
-#     st.markdown('## **Herbs**')
-#     st.dataframe(herbs_table(), width=800, height=900)
 
